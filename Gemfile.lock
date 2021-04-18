@@ -56,6 +56,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    ansi (1.5.0)
     bcrypt (3.1.16)
     bootsnap (1.7.3)
       msgpack (~> 1.0)
@@ -86,6 +87,11 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.0)
     minitest (5.14.4)
+    minitest-reporters (1.4.3)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     msgpack (1.4.2)
     nio4r (2.5.7)
     nokogiri (1.11.3-x86_64-linux)
@@ -135,6 +141,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    ruby-progressbar (1.11.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -166,6 +173,7 @@ DEPENDENCIES
   hirb (~> 0.7.3)
   hirb-unicode-steakknife (~> 0.0.9)
   listen (~> 3.2)
+  minitest-reporters (~> 1.1, >= 1.1.11)
   pg (>= 0.18, < 2.0)
   pry-byebug (~> 3.9)
   puma (~> 4.1)
