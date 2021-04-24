@@ -36,3 +36,4 @@ module UserAuth
   # ログインユーザーが見つからない場合の例外
   mattr_accessor :not_found_exception_class
   self.not_found_exception_class = ActiveRecord::RecordNotFound
+end
