@@ -1,6 +1,8 @@
 require 'jwt'
 
 module UserAuth
+
+  # JWTの発行及び検証クラス
   class AuthToken
     attr_reader :token
     attr_reader :payload
@@ -8,10 +10,6 @@ module UserAuth
 
     def initialize(lifetime: nil, payload: {}, token: nil, options: {})
       # トークンが存在する場合デコード
-      puts @lifetime
-      puts @payload
-      puts @token
-      puts @options
       if token.present?
         @payload, _ = JWT.decode(token.to_s, decode_key, true, decode_options.merge(options))
         @token = token
@@ -20,10 +18,6 @@ module UserAuth
         @payload = claims.merge(payload)
         @token = JWT.encode(@payload, secret_key, algorithm, header_fields)
       end
-      puts @lifetime
-      puts @payload
-      puts @token
-      puts @options
     end
 
     private
