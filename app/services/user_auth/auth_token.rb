@@ -20,6 +20,11 @@ module UserAuth
       end
     end
 
+    # subjectよりユーザー検索
+    def entity_for_user
+      User.find @payload["sub"]
+    end
+
     private
       # エンコードに用いる鍵
       def secret_key
