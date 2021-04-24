@@ -25,6 +25,11 @@ module UserAuth
       User.find @payload["sub"]
     end
 
+    def lifetime_text
+      time, period = @lifetime.inspect.sub(/s\z/, "").split
+      time + I18n.t("datetime.periods.#{period}", default: "")      
+    end
+
     private
       # エンコードに用いる鍵
       def secret_key
