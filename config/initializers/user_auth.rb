@@ -1,3 +1,4 @@
+# JWT初期設定モジュール
 module UserAuth
   # JWT有効期限デフォルト値
   # 2週間
