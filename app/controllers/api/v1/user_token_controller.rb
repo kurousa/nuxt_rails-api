@@ -15,7 +15,7 @@ class Api::V1::UserTokenController < ApplicationController
   end
 
   # logout
-  def destory
+  def destroy
     head(:ok)
   end
 
