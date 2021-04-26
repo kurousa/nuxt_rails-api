@@ -32,6 +32,9 @@ gem 'hirb-unicode-steakknife', '~> 0.0.9'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 # JWTライブラリ Doc: https://github.com/jwt/ruby-jwt
 gem 'jwt', '~> 2.2'
+# CookieのSameSite属性をNoneにする(Chrome 80対応)
+# Doc: https://qiita.com/ahera/items/0c8276da6b0bed2b580c
+gem 'rails_same_site_cookie'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
